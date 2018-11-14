@@ -51,7 +51,7 @@ class BookController extends Controller
       if($request->has('authors')) :
          $book->authors()->attach($request->input('authors'));
       endif;
-      // return redirect()->route('admin.book.index');
+      return redirect()->route('admin.book.index');
 
     }
 
@@ -103,8 +103,11 @@ class BookController extends Controller
       // return redirect()->route('admin.book.index')
       //       ->with('flash_message',
       //       'Описание книги обновлено.');
-      return redirect($request->previous)->with('flash_message',
+      // return redirect($request->previous)->with('flash_message',
+      //        'Описание книги обновлено.');
+      return redirect()->back()->with('flash_message',
              'Описание книги обновлено.');
+
 
     }
 

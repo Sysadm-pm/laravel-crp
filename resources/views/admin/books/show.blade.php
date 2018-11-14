@@ -7,7 +7,7 @@
        {{--var_dump($book) --}}
 
 
-    <table class="table table-striped table-bordered w-auto table-hover">
+    <table class="table table-striped table-bordered table-hover">
       <thead class="thead-dark">
         <tr class="">
 
@@ -33,11 +33,12 @@
       </tbody>
 
     </table>
-        <a href="{{ url()->previous() }}" class="btn btn-primary btn-block">Назад</a>
+        <a href="{{ url()->previous() }}" class="btn btn-primary btn-block">Назад f</a>
+
     @if($book->created_by == Auth::user()->id )
-      <a href=" {{route('admin.book.edit', $book)}} " class="btn btn-primary btn-block btn-success"> Редактировать <i class="fa fa-edit"></i></a>
+      <a href=" {{route('admin.book.edit', $book)}} " class="btn btn-primary btn-block btn-success"> Редактировать + <i class="fa fa-edit"></i></a>
     @else
-      <a href="{{ route('admin.book.show', $book) }}">{{$book->title}} <i class="fa fa-eye"></i></a>
+      dfgsdfg
     @endif
 </div>
 

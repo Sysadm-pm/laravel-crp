@@ -6,7 +6,7 @@
        <h1>Список книг и авторов</h1>
 
 
-    <table class="table table-striped table-bordered w-auto table-hover">
+    <table class="table table-striped table-bordered table-hover ">
       <thead class="thead-dark">
         <tr class="">
           <th class="">Название книги</th>
@@ -42,7 +42,11 @@
           </tr>
         @empty
           <tr>
-            <td colspan="5" class="text-center"><h2>Данные отсутствуют</h2></td>
+            <td colspan="5" class="text-center">
+<div class="col-md-12">
+  <h2>Данные отсутствуют...</h2>
+</div>
+            </td>
           </tr>
         @endforelse
       </tbody>
